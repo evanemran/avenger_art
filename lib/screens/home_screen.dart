@@ -17,7 +17,7 @@ class _HomeScreenState extends State<HomeScreen> {
   Widget build(BuildContext context) {
 
     var size = MediaQuery.of(context).size;
-    final double itemHeight = (size.height - kToolbarHeight - 24) / 3.5;
+    final double itemHeight = (size.height - kToolbarHeight - 24) / 4;
     final double itemWidth = size.width / 3;
 
     Widget buildWallpapers(BuildContext context, List<Avenger> list) {
@@ -68,11 +68,7 @@ class _HomeScreenState extends State<HomeScreen> {
           CircleAvatar(
             radius: 18.0, // Adjust the radius based on your requirement
             backgroundColor: Colors.white,
-            child: IconButton(onPressed: () {}, icon: const Icon(
-              Icons.person,
-              size: 18.0, // Adjust the icon size based on your requirement
-              color: Colors.red,
-            ),)
+            child: Image.asset("assets/evan.png", height: 36, width: 36, fit: BoxFit.cover,),
           ),
           const SizedBox(width: 12,)
         ],
